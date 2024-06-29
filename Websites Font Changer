@@ -1,0 +1,53 @@
+// ==UserScript==
+// @name         Websites Font Changer - Montserrat
+// @namespace    http://tampermonkey.net/
+// @version      0.5.0
+// @description  Intelligently changes website fonts to Montserrat while preserving icons and math equations
+// @author       NetAcao
+// @match        *://*/*
+// @exclude      https://openuserjs.org/scripts/*/source
+// @grant        GM_addStyle
+// @grant        GM_getResourceText
+// @resource     customCSS https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap
+// @run-at       document-start
+// ==/UserScript==
+
+(function() {
+    'use strict';
+
+    // Load Montserrat font
+    var newCSS = GM_getResourceText("customCSS");
+    GM_addStyle(newCSS);
+
+    // Define the new font family
+    let newFont = '"Montserrat", sans-serif';
+
+    // Whitelist of classes and elements to ignore
+    let whitelist = [
+        '.fa', '.fas', '.far', '.fal', '.fad', // Font Awesome
+        '.material-icons', // Material Icons
+        '.katex', '.MathJax', // Math equations
+        'code', 'pre' // Code snippets
+    ].join(', ');
+
+    // Create a style element
+    let style = document.createElement('style');
+    style.type = 'text/css';
+    style.innerHTML = `
+        /* Change font for most elements */
+        body, p, h1, h2, h3, h4, h5, h6, a, span, div {
+            font-family: ${newFont} !important;
+        }
+
+        /* Preserve original font for whitelisted elements */
+        ${whitelist} {
+            font-family: inherit !important;
+        }
+    `;
+
+    // Insert the style element into the document
+    document.head.appendChild(style);
+
+    // Optional: Log to console that the script has run
+    console.log('Enhanced Font Changer script has been applied');
+})();
