@@ -7,13 +7,12 @@ It's important to note that Font Customizer is not a one-size-fits-all solution.
 # How to Use Websites Font Changer to Montserrat
 Install a Compatible Browser Extension: Depending on your browser, you'll need to install a suitable extension that allows you to run custom user scripts. Some popular options include:
 
-Chrome/Edge: Tampermonkey or Greasemonkey
+**Chrome/Edge:** Tampermonkey or Greasemonkey</p>
+**Firefox:** Greasemonkey or Violentmonkey</p>
+**Brave:** Tampermonkey or Violentmonkey</p>
 
-Firefox: Greasemonkey or Violentmonkey
-
-Brave: Tampermonkey or Violentmonkey
-
-Install the Websites Font Changer to Montserrat Script: Once you have the extension installed, 
+**Install the Websites Font Changer to Montserrat Script:**</p>
+Once you have the extension installed
 
 # Privacy policy
 The typeface itself cannot collect or send information.
