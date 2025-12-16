@@ -1,0 +1,23 @@
+// ==UserScript==
+// @name         Change all fonts to Montserrat
+// @description  Change annoying fonts to a more readable one
+// @version      0.1
+// @author       Netacao
+// @license      MIT
+// @match        *://*/*
+// @exclude      https://openuserjs.org/scripts/*/source
+// @grant        GM_addStyle
+// @grant        GM_getResourceText
+// @fetch        https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..400;1,100..400&display=swap
+// @resource     customCSS https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..400;1,100..400&display=swap
+// @run-at       document-start
+// @updateURL    
+
+// ==/UserScript==
+
+var newCSS=GM_getResourceText("customCSS");
+GM_addStyle(newCSS);
+let font='"Montserrat",sans-serif,epicons';
+let selectors='.normal,description,.article_detail,a,.mb15.short_intro,article.art_item,.clearfix.inner_section.the-article-header,.text,title_news,root,.LeUQr,html,strong,body,p,h1,h2,h3,h4,h5,label,a:not([class*="icon"]) element,.submit,button,b,cite,time,li,la,section,td,address,link,article,main,footer,nav,code,pre,select';
+
+GM_addStyle(selectors+'{font-family:'+font+' !important;}');
