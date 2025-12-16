@@ -11,7 +11,7 @@
 // @fetch        https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..400;1,100..400&display=swap
 // @resource     customCSS https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..400;1,100..400&display=swap
 // @run-at       document-start
-// @updateURL    
+// @updateURL    https://raw.githubusercontent.com/NetAcao/Tampermonkey-Web-Fonts-changer/refs/heads/main/Alternative
 
 // ==/UserScript==
 
